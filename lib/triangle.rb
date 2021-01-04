@@ -16,10 +16,17 @@ class Triangle
       raise TriangleError
     elsif(equilateral?)
       :equilateral
+<<<<<<< HEAD
     elsif(scalene?)
       :scalene
     elsif(isosceles?)
       :isosceles
+=======
+    elsif(isosceles?)
+      :isosceles
+    elsif(scalene?)
+      :scalene
+>>>>>>> c183c7132a7e50f8d2845fb540f69210b9f350b1
     end
   end
   
@@ -35,16 +42,28 @@ class Triangle
     (@side1 == @side2) && (@side1 == @side3)
   end
   
+<<<<<<< HEAD
   def scalene?
     (@side1 != @side2) && (@side1 != @side3) && (@side2 != @side3)
   end
   
+=======
+>>>>>>> c183c7132a7e50f8d2845fb540f69210b9f350b1
   def isosceles?
     (@side2 == @side3) || (@side1 == @side2) || (@side1 = @side3)
   end
   
+<<<<<<< HEAD
   def valid?
     (@side1 + @side2 > @side3) && (@side2 + @side3 > @side1) && (@side1 + @side3 > @side2)
+=======
+  def scalene?
+    (@side1 != @side2) && (@side1 != @side3) && (@side2 != @side3)
+  end
+  
+  def valid?
+    (@side1 + @side2 > @side3) && (@side2 + @side3 > @side1) && (@side1 + @side2 > @side3)
+>>>>>>> c183c7132a7e50f8d2845fb540f69210b9f350b1
   end
   
   class TriangleError < StandardError
